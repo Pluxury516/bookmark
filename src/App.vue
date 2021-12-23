@@ -30,7 +30,7 @@
 .header{
   width: 100%;
   background-color: #3367d6;
-  height: 50px;
+  height: 60px;
   display: flex;
   align-items: center;
   &__title{
