@@ -1,7 +1,9 @@
 <template>
-  <div class="home-container">
-    <div class="home">
-      <h3>Панель закладок</h3>
+  <div class="home">
+    <div class="home__body">
+      <h3 class="home__title">
+        Панель закладок
+      </h3>
       <BookmarkList
         :bookmarks="bookmarks"
         @update-bookmarks="updateBookmarks" />
@@ -39,15 +41,16 @@ export default class Home extends Vue {
 </script>
 
  <style lang="scss">
+
 .home{
-  border-radius: 5px;
+  width: 65%;
+  &__body{
+    border-radius: 5px;
   padding: 10px;
   box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
-  h3{
+  &__title{
     border-bottom: 1px solid #ccc;
   }
-}
-.home-container{
-  width: 65%;
+  }
 }
 </style>

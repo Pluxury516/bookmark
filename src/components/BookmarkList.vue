@@ -1,5 +1,5 @@
 <template>
-  <div class="bookmark-list">
+  <div>
     <BookmarkListItem
       v-for="(bookmark,index) in bookmarks"
       :key="index"

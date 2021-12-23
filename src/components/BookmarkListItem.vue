@@ -1,12 +1,12 @@
 <template>
   <div
-    class="bookmark-item">
+    class="bookmark">
     <a
-      class="bookmark-item-link"
+      class="bookmark__item"
       :href="bookmark.url"
       target="_blank">
-      <p>{{ bookmark.name }}</p>
-      <small>{{ bookmark.url }}</small>
+      <p class="bookmark__title">{{ bookmark.name }}</p>
+      <small class="bookmark__subtitle">{{ bookmark.url }}</small>
     </a>
     <div>
       <b-dropdown
@@ -60,17 +60,20 @@ export default class BookmarkListItem extends Vue {
 </script>
 
 <style lang="scss">
-.bookmark-item-link{
-  display: flex;
-  text-decoration: none;
-  color: #222222;
-}
 
-.bookmark-item{
+.bookmark{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  small{
+  &__item{
+  display: flex;
+  text-decoration: none;
+  color: #222222;
+  &:hover{
+    color: #222222;
+  }
+  }
+  &__subtitle{
     color: #979696;
     margin: 2px 5px;
   }
@@ -78,8 +81,5 @@ export default class BookmarkListItem extends Vue {
     background-color: #ccc;
   }
 
-  .bookmark-item-icon{
-    cursor: pointer;
-  }
 }
 </style>

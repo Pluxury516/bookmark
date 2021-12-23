@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <div class="app-container">
-      <div class="nav flex-column">
+    <div class="app">
+      <div class="app__nav">
         <router-link to="/">
           Панель закладок
         </router-link>
@@ -23,21 +23,21 @@
   padding-top: 50px;
 }
 
-.app-container{
-display: flex;
-justify-content: space-evenly;
-}
-
-.nav {
-  a {
-    font-weight: bold;
+.app{
+  display: flex;
+  justify-content: space-evenly;
+  &__nav{
+    display: flex;
+    flex-direction: column;
+    a{
+      font-weight: bold;
     color: #2c3e50;
     margin-top: 15px;
     margin-left: 5px;
     text-decoration: none;
-
-    &.router-link-exact-active {
+     &.router-link-exact-active {
       color: #42b983;
+    }
     }
   }
 }
