@@ -1,5 +1,10 @@
 <template>
   <div id="app">
+    <header class="header">
+      <h4 class="header__title">
+        Закладки
+      </h4>
+    </header>
     <div class="app">
       <div class="app__nav">
         <router-link to="/">
@@ -20,15 +25,28 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
-  padding-top: 50px;
+}
+
+.header{
+  width: 100%;
+  background-color: #3367d6;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  &__title{
+    color: #fff;
+    padding: 40px;
+  }
 }
 
 .app{
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
+  padding-top: 50px;
   &__nav{
     display: flex;
     flex-direction: column;
+    margin-right: 50px;
     a{
       font-weight: bold;
     color: #2c3e50;

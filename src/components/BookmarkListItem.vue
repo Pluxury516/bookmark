@@ -1,12 +1,12 @@
 <template>
   <div
-    class="bookmark">
+    class="bookmark-list-item">
     <a
-      class="bookmark__item"
+      class="bookmark-list-item__link"
       :href="bookmark.url"
       target="_blank">
-      <p class="bookmark__title">{{ bookmark.name }}</p>
-      <small class="bookmark__subtitle">{{ bookmark.url }}</small>
+      <p class="bookmark-list-item__title">{{ bookmark.name }}</p>
+      <small class="bookmark-list-item__subtitle">{{ bookmark.url }}</small>
     </a>
     <div>
       <b-dropdown
@@ -61,11 +61,11 @@ export default class BookmarkListItem extends Vue {
 
 <style lang="scss">
 
-.bookmark{
+.bookmark-list-item{
   display: flex;
   justify-content: space-between;
   align-items: center;
-  &__item{
+  &__link{
   display: flex;
   text-decoration: none;
   color: #222222;
