@@ -1,5 +1,7 @@
 <template>
-  <div><CreateBookmark /></div>
+  <div class="create-bookmark-container">
+    <CreateBookmark />
+  </div>
 </template>
 
 <script lang="ts">
@@ -14,6 +16,11 @@ import CreateBookmark from '../components/CreateBookmark.vue';
   },
 })
 export default class About extends Vue {
-
 }
 </script>
+
+<style lang="scss">
+.create-bookmark-container{
+  width: 65%;
+}
+</style>

@@ -24,7 +24,7 @@
         <b-dropdown-item @click="changeBookmark">
           Изменить
         </b-dropdown-item>
-        <b-dropdown-item @click="onCopyUrl">
+        <b-dropdown-item @click="copyBookmarkUrl">
           Копировать url
         </b-dropdown-item>
       </b-dropdown>
@@ -43,7 +43,7 @@ import { IBookmark } from '@/types/interfaces';
 export default class BookmarkListItem extends Vue {
   @Prop({ type: Object, required: true }) readonly bookmark!:IBookmark
 
-  onCopyUrl():void {
+  copyBookmarkUrl():void {
     navigator.clipboard.writeText((this.bookmark.url)).catch((error) => {
       throw new Error(error);
     });
@@ -58,3 +58,28 @@ export default class BookmarkListItem extends Vue {
   }
 }
 </script>
+
+<style lang="scss">
+.bookmark-item-link{
+  display: flex;
+  text-decoration: none;
+  color: #222222;
+}
+
+.bookmark-item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  small{
+    color: #979696;
+    margin: 2px 5px;
+  }
+  &:hover{
+    background-color: #ccc;
+  }
+
+  .bookmark-item-icon{
+    cursor: pointer;
+  }
+}
+</style>

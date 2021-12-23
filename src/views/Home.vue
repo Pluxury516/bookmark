@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="home-container">
     <div class="home">
       <h3>Панель закладок</h3>
       <BookmarkList
@@ -37,3 +37,17 @@ export default class Home extends Vue {
    }
 }
 </script>
+
+ <style lang="scss">
+.home{
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0px 5px 10px 2px rgba(34, 60, 80, 0.2);
+  h3{
+    border-bottom: 1px solid #ccc;
+  }
+}
+.home-container{
+  width: 65%;
+}
+</style>
