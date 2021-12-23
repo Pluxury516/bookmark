@@ -1,0 +1,22 @@
+.bookmark-item-link{
+  display: flex;
+  text-decoration: none;
+  color: $black;
+}
+
+.bookmark-item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  small{
+    color: $secondgrey;
+    margin: 2px 5px;
+  }
+  &:hover{
+    background-color: $grey;
+  }
+
+  .bookmark-item-icon{
+    cursor: pointer;
+  }
+}
