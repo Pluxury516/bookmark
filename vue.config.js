@@ -1,3 +1,3 @@
 module.exports = {
-  publicPath: '/bookmark-manager/',
+  publicPath: '/bookmarks-manager/',
 };
